@@ -13,7 +13,7 @@ pre-commit:
       stage_fixed: true
     typeCheck:
       glob: "*.{ts,tsx}"
-      run: yarn tsc --noEmit
+      run: yarn type:check
       stage_fixed: true
     test:
       run: yarn test --findRelatedTests {staged_files} --passWithNoTests
