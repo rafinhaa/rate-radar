@@ -1,3 +1,4 @@
+import Loading from "./Loading"
 import Typography from "./Typography"
 
-export { Typography }
+export { Loading, Typography }
