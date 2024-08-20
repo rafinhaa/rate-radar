@@ -10,8 +10,9 @@ import {
 import { useFonts } from "expo-font"
 import { StatusBar } from "expo-status-bar"
 import { useTranslation } from "react-i18next"
-import { ActivityIndicator, Text, View } from "react-native"
+import { Text, View } from "react-native"
 
+import { Loading } from "@/components"
 import "@/locales"
 import "@/styles/global.css"
 
@@ -26,10 +27,11 @@ export default function App() {
     Poppins_600SemiBold,
   })
 
-  if (!fontsLoaded) return <ActivityIndicator />
+  if (!fontsLoaded)
+    return <Loading containerClassName="flex-1 justify-center bg-blue-950" />
 
   return (
-    <View className="flex-1 items-center justify-center bg-white ">
+    <View className="flex-1 items-center justify-center bg-blue-950">
       <Text>{t("startingMessage")}</Text>
       <StatusBar style="auto" />
     </View>
