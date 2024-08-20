@@ -945,6 +945,16 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
+"@expo-google-fonts/montserrat@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/montserrat/-/montserrat-0.2.3.tgz#e22b337ee6bd2007126b466ddd18f9de59eb3fc6"
+  integrity sha512-9imhwIs6j5uyTkTxoNplC5T8ERES1W98ZgF7kf7OaypnbcoLoIW0wKH6oudecZyiEqoSktC7epkRpj+UEUvzWg==
+
+"@expo-google-fonts/poppins@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/poppins/-/poppins-0.2.3.tgz#807fc1bf58948c32ddfb9c67f7329ff16cc78d14"
+  integrity sha512-PXkur1ZY/puy1PwVFYPJx8qiI3dtBzC2ig1bo53swCt7/sI7krCGYRO6hLBNp15M0kcNh2J4cCR9ZQyFxsving==
+
 "@expo/bunyan@^4.0.0":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@expo/bunyan/-/bunyan-4.0.1.tgz#ab9e17e36c71c704a0ce72168378a487368da736"
@@ -4185,7 +4195,7 @@ expo-file-system@~17.0.1:
   resolved "https://registry.yarnpkg.com/expo-file-system/-/expo-file-system-17.0.1.tgz#b9f8af8c1c06ec71d96fd7a0d2567fa9e1c88f15"
   integrity sha512-dYpnZJqTGj6HCYJyXAgpFkQWsiCH3HY1ek2cFZVHFoEc5tLz9gmdEgTF6nFHurvmvfmXqxi7a5CXyVm0aFYJBw==
 
-expo-font@~12.0.9:
+expo-font@^12.0.9, expo-font@~12.0.9:
   version "12.0.9"
   resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-12.0.9.tgz#096860a6b8b5dd54152262eafd318593ec2db48c"
   integrity sha512-seTCyf0tbgkAnp3ZI9ZfK9QVtURQUgFnuj+GuJ5TSnN0XsOtVe1s2RxTvmMgkfuvfkzcjJ69gyRpsZS1cC8hjw==
