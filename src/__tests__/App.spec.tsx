@@ -6,8 +6,6 @@ describe("App", () => {
   it("should be to able to render correctly", () => {
     render(<App />)
 
-    screen.debug()
-
     expect(screen.getByText(resources.startingMessage)).toBeTruthy()
   })
 })
