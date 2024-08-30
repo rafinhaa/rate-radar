@@ -1,12 +1,14 @@
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons"
+import { cssInterop } from "nativewind"
 import { ComponentProps } from "react"
-import { ColorValue } from "react-native"
 
-export type IconProps = Omit<
+type MaterialCommunityIconsProps = Omit<
   ComponentProps<typeof MaterialCommunityIcons>,
-  "size" | "color"
-> & {
-  color?: ColorValue
+  "size"
+>
+
+export type IconProps = MaterialCommunityIconsProps & {
+  colorTailwind?: { color: string }
   size?:
     | "xs"
     | "sm"
@@ -40,21 +42,28 @@ const sizeMap = {
   "9xl": 128,
 }
 
-const Icon = ({ size, ...rest }: IconProps) => {
-  const sizeIsNumber = typeof size === "number"
-  const sizeMapped = sizeIsNumber ? size : sizeMap[size || "base"]
+const Icon = cssInterop(
+  ({ color, colorTailwind, size, ...rest }: IconProps) => {
+    const sizeIsNumber = typeof size === "number"
+    const sizeMapped = sizeIsNumber ? size : sizeMap[size || "base"]
 
-  const colorMapped = rest.color || "white"
-  const testID = rest.testID || `icon-${rest.name}-${sizeMapped}`
+    const colorClassName = colorTailwind?.color
+    const colorPriority = colorClassName || color
+    const colorFinal = colorPriority || "white"
+    const testID = rest?.testID || `icon-${rest.name}-${sizeMapped}`
 
-  return (
-    <MaterialCommunityIcons
-      testID={testID}
-      size={sizeMapped}
-      color={colorMapped}
-      {...rest}
-    />
-  )
-}
+    return (
+      <MaterialCommunityIcons
+        testID={testID}
+        size={sizeMapped}
+        color={colorFinal}
+        {...rest}
+      />
+    )
+  },
+  {
+    colorClassName: "colorTailwind",
+  },
+)
 
 export default Icon
