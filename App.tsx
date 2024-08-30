@@ -9,16 +9,14 @@ import {
 } from "@expo-google-fonts/poppins"
 import { useFonts } from "expo-font"
 import { StatusBar } from "expo-status-bar"
-import { useTranslation } from "react-i18next"
-import { Text, View } from "react-native"
+import { View } from "react-native"
 
 import { Loading } from "@/components"
 import "@/locales"
+import { Routes } from "@/routes"
 import "@/styles/global.css"
 
 export default function App() {
-  const { t } = useTranslation()
-
   const [fontsLoaded] = useFonts({
     Montserrat_700Bold,
     Montserrat_900Black,
@@ -31,9 +29,9 @@ export default function App() {
     return <Loading containerClassName="flex-1 justify-center bg-blue-950" />
 
   return (
-    <View className="flex-1 items-center justify-center bg-blue-950">
-      <Text>{t("startingMessage")}</Text>
+    <View className="flex-1">
       <StatusBar style="auto" />
+      <Routes />
     </View>
   )
 }
